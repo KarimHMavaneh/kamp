@@ -1,0 +1,21 @@
+/* body{
+    background:rgb(199, 195, 199);
+} */
+.img-thumbnail {
+  width: 100%;
+  padding: 0;
+}
+#nameNdesc {
+  padding: 10px;
+}
+
+#delete-form {
+  display: inline;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
