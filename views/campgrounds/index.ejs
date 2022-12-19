@@ -1,0 +1,56 @@
+<%- include("../partials/header") -%>
+
+<div class="container">
+  <header class="jumbotron text-center">
+    <div class="container">
+      <h1 class="h1">Welcome To K-Campgrounds</h1>
+      <p class="p">Welcome to My Campgound Page</p>
+
+      <p>
+        <a class="btn btn-primary btn-large" href="/campgroundsPage/new"
+          >Add New Campground</a
+        >
+      </p>
+    </div>
+  </header>
+
+  <div class="album py-5 text-center">
+    <div class="container">
+      <div class="row">
+        <% campgrounds.forEach( (camground)=>{ %>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="225"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              src="<%= camground.image%>"
+              alt="sort of camping"
+            />
+
+            <div class="card-body tesx">
+              <p class="card-text">
+                <%= camground.name %>
+              </p>
+
+              <a
+                href="/campgroundsPage/<%= camground._id %>"
+                class="btn btn-primary"
+              >
+                More info...</a
+              >
+            </div>
+          </div>
+        </div>
+        <% });%>
+      </div>
+    </div>
+  </div>
+
+  <%- include("../partials/footer") -%>
+</div>

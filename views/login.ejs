@@ -1,0 +1,46 @@
+<%- include("./partials/header") -%>
+<!-- 
+<h1>Login Form</h1>
+
+<div class="container">
+  <form class="form-signin" action="/login" method="POST">
+    <input type="email" name="username" autofocus placeholder="username" />
+    <input type="password" name="password" placeholder="password" />
+    <button>Login</button>
+  </form>
+</div> -->
+
+<div class="container">
+  <h1 style="text-align: center; margin: 20px auto;">Login Form</h1>
+  <div class="row">
+    <div style="width: 40%; margin: 0 auto;">
+      <form class="form-signin" action="/login" method="POST">
+        <!-- to give some space to our element inside from we use
+                 div with form-group calss for eaxh element -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            autofocus
+            placeholder="username"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            placeholder="password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-block">
+          Submit
+        </button>
+      </form>
+      <a href="/">Go Back</a>
+    </div>
+  </div>
+</div>
+<%- include("./partials/footer") -%>

@@ -1,0 +1,26 @@
+<%- include("../partials/header") -%> 
+<div class="container">
+   
+    <div class="row">
+         <div style="width:40%; margin:0 auto;" >
+             <h1>Add a new comment to <%= campground.name %> </h1>
+            <form action="/campgroundsPage/<%= campground._id %>/comments" method="POST">
+            <!-- to give some space to our element inside from we use
+                 div with form-group calss for eaxh element -->
+                 <!-- <div class="form-group">
+                    <input class="form-control" type="text" value="<%= currentUser.username %> " name="comment[author]">
+                 </div> -->
+                
+                 <div class="form-group">
+                    <textarea name="comment[text]" placeholder="Comment Goes Here" id="" cols="30" rows="10"></textarea>
+                    <!-- <input class="form-control" type="text" placeholder="comment" name="comment[text]"> -->
+                 </div>
+                 
+               <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+                      
+            </form>  
+        <a href="/campgroundsPage/<%=campground._id%>/">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") -%> 

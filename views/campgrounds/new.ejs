@@ -1,0 +1,52 @@
+<%- include("../partials/header") -%>
+<div class="container">
+  <h1 style="text-align: center; margin: 20px auto;">Create New Campground!</h1>
+  <div class="row">
+    <div style="width: 40%; margin: 0 auto;">
+      <form action="/campgroundsPage" method="POST">
+        <!-- to give some space to our element inside from we use
+                 div with form-group calss for eaxh element -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="campingName"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="number"
+            placeholder="price"
+            name="price"
+            min="0.0"
+            step="0.5"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="image URL"
+            name="image"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Description"
+            name="desc"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-block">
+          Submit
+        </button>
+      </form>
+      <a href="/">Go Back</a>
+    </div>
+  </div>
+</div>
+<%- include("../partials/footer") -%>

@@ -1,0 +1,29 @@
+<%- include("../partials/header") -%> 
+<div class="container">
+   
+    <div class="row">
+         <div style="width:40%; margin:0 auto;" >
+             <h1>Edit comment  </h1>
+            <form action="/campgroundsPage/<%= campgroundID %>/comments/<%= comment._id%>?_method=PUT" method="POST">
+            <!-- to give some space to our element inside from we use
+                 div with form-group calss for eaxh element -->
+                 <!-- <div class="form-group">
+                     NOTE: be very careful about spaces after  ejs  if provokes errors while comparing usernames or id-->
+                    <!-- <input class="form-control" type="text" value="<%# comment.author.username  %>" name="comment[author]" > -->
+                 <!-- </div>  -->
+                 <!-- <div class="form-group">
+                    <input class="form-control" type="text" placeholder="image URL" name="image">
+                 </div> -->
+                 <div class="form-group">
+                    <textarea name="comment[text]" spellcheck="true"  id="" cols="30" rows="10" ><%= comment.text  %></textarea>
+                    <!-- <input class="form-control" type="text" placeholder="comment" name="comment[text]"> -->
+                 </div>
+                 
+               <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+                      
+            </form>  
+        <a href="/campgroundsPage/<%=campgroundID%>/">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") -%> 
