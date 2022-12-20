@@ -69,6 +69,7 @@ app.use(indexRoutes);
 app.use("/campgroundsPage/:id/comments", commentsRoutes);
 app.use("/campgroundsPage", campgroundRoutes);
 //===============================================================
-app.listen(process.env.PORT, process.env.IP, () => {
-  console.log("The K-camp Server Has Started!");
+const port = 3000 || process.env.PORT;
+app.listen(port, process.env.IP, () => {
+  console.log(`The k-camp Server has started on port ${port}`);
 });
